@@ -7,6 +7,7 @@ source ~/.bashrc
 ```
 
 ```
+git clone https://github.com/independenceee/midnight.git
 cd midnight/ce-ashmaize/cli_hunt/rust_solver
 cargo build --release
 cd .. # Go back to the cli_hunt dir
