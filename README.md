@@ -15,6 +15,7 @@ touch python_orchestrator/challenges.json
 ```
 
 ```
+tmux
 cd python_orchestrator  
 uv run main.py run
 ```
