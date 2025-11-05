@@ -29,7 +29,34 @@ session = requests.Session()
 # --- HTTP Session Setup ---
 # Using curl_cffi to impersonate a browser's TLS fingerprint. This is more
 # effective at avoiding blocking than just setting User-Agent headers.
-session = requests.Session(impersonate="chrome110")
+
+
+# Proxy setup
+# proxies = {
+#     "http": "http://user:pass@proxy-ip:port",
+#     "https": "http://user:pass@proxy-ip:port",
+# }
+
+proxies = {
+    "http": "http://cardano2vn:cardano2vn@142.111.48.253:7030",
+    "https": "http://cardano2vn:cardano2vn@142.111.48.253:7030",
+}
+
+session = requests.Session(impersonate="chrome124")  # DÙNG CHROME MỚI
+session.proxies.update(proxies)
+
+session.headers.update({
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin",
+})
+
 
 
 # --- Logging Setup ---
