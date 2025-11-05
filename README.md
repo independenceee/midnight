@@ -7,7 +7,7 @@ source ~/bashrc
 ```
 
 ```
-cd ce-ashmaize/cli_hunt/rust_solver
+cd midnight/ce-ashmaize/cli_hunt/rust_solver
 cargo build --release
 cd .. # Go back to the cli_hunt dir
 touch python_orchestrator/challenges.json
