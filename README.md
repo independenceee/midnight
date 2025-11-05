@@ -3,7 +3,7 @@ sudo apt update
 sudo apt install tmux -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -LsSf https://astral.sh/uv/install.sh | sh
-source ~/bashrc
+source ~/.bashrc
 ```
 
 ```
